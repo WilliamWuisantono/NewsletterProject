@@ -2,7 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: Build and deploy Python app to Azure Web App - ContentNewsletter
+name: Build and deploy Python app to Azure Web App - contentnewsletter
 
 on:
   push:
@@ -65,14 +65,14 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_7D2AD85D409743C596137A2A3C15C124 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_244E8AF112AD47C098B219D05787BAB1 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_4F8EF6A60E084570BA3B3DB551732818 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_5C83300783CF4A32AA1B851C521250F7 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_420D84CA980441D2A982AF7285A439ED }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_EE1D24E2C15448B7A78B77D8A9F964A0 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'ContentNewsletter'
+          app-name: 'contentnewsletter'
           slot-name: 'Production'
           
